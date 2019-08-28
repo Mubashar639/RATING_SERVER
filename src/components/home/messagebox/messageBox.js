@@ -75,12 +75,12 @@ class Image extends Component {
                     <div className={this.state.class5}></div>
                     <div  className={this.state.class8}></div>
                     <div  className={this.state.class9}>asdf askdjf alsdkfj</div>
-                    <div className={this.state.class2} id="some" style={{ position: "absolute", left: "56.5%" }}>
+                    <div className={this.state.class2} id="some" style={{ position: "absolute", left: "596px" }}>
                     duffare ani dya mzak aa ye dfsa
 
                     </div>
                     <div className={this.state.class7}></div>
-                    <div className={this.state.class4 } style={{ position: "absolute", left: "69.52%" }}>
+                    <div className={this.state.class4 } style={{ position: "absolute", left: "747px" }}>
                     duffare ani dya mzak aa ye
                    
                         </div>

@@ -14,14 +14,13 @@ body{
     position: absolute;
     bottom: 225px;
     height: 100px;
-    left: 25%;
+    left: 191px;
     animation: example 2s;
     border: 1px solid#ababab!important;
 }
 .maindiv{ 
-    background-color: red;
 
-    width: 1200px; height: 500px;
+    width: 1000px; height: 500px;
     /* min-Width:1300px;  */;
     display: flex;
     justify-content: center;
@@ -36,7 +35,7 @@ body{
 }
 
 .textme {
-    height: 50px;
+    height: 60px;
     width: 130px;
     display: flex;
     flex-wrap: wrap;
@@ -45,9 +44,9 @@ body{
     flex-wrap: wrap;
     font-size: 14px;
     position: absolute;
-    bottom: 331px;
+    bottom: 329px;
     animation: divanimation 2s;
-    left: 17.4%;
+    left: 100px;
     border: 1px solid #ababab!important;
     
     border-radius: 10px
@@ -76,7 +75,7 @@ body{
     position: absolute;
     bottom: 225px;
     height: 140px;
-    left: 39.1%;
+    left: 374px;
     animation: line3 2s;
     border: 1px solid #ababab!important;
 }
@@ -90,18 +89,18 @@ body{
 }
 
 .textme2{
-    height: 50px;
+    height: 60px;
     padding: 5px;
     /* display: none; */
-    width: 100px;
+    width: 130px;
     display: flex;
     flex-wrap: wrap-reverse;
     /* overflow: hidden; */
     font-size: 14px;
     position: absolute;
-    bottom: 371px;
+    bottom: 370px;
     animation: divanimation 2s;
-    left: 33%;
+    left:283px;
     border: 1px solid#ababab!important;
     border-radius: 10px
 
@@ -113,7 +112,7 @@ body{
     position: absolute;
     bottom: 225px;
     height: 100px;
-    left: 63.8%;
+    left: 687px;
     animation: line4 2s;
     border: 1px solid#ababab!important;
 }
@@ -132,7 +131,7 @@ body{
     position: absolute;
     bottom: 226px;
     height: 140px;
-    left: 75.58%;
+    left: 838px;
     animation: line3 2s;
     border: 1px solid#ababab!important;
 }
@@ -142,6 +141,14 @@ body{
     }
     100% {
         height: 140px;
+    }
+}
+@keyframes line6 {
+    0% {
+        height: 0
+    }
+    100% {
+        height: 50px;
     }
 }
 .commonclass{
@@ -161,7 +168,7 @@ border-bottom-color: inherit;
 border-right-color: inherit;
 background: #fff;}
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1040px) {
     .milldleline{
         z-index: 100;
         height: 0px;
@@ -169,43 +176,41 @@ background: #fff;}
         position: absolute;
         bottom: 157px !important;
         height: 100px;
-        left: 58% !important;
+        left: 270px !important;
         animation: line4 2s;
         border: 1px solid green!important;
       }
       .milldlediv{
-        height: 50px;
+        height: 60px;
         padding: 5px;
         /* display: none; */
-        width: 100px;
+        width: 130px;
         background-color: white;
         display: flex;
         flex-wrap: wrap-reverse;
         /* overflow: hidden; */
         font-size: 14px;
         position: absolute;
-        bottom: 265px !important;
+        bottom: 212px !important;
         animation: divanimation 2s;
-        left: 43.6% !important;
+        left: 179px !important;
         border: 1px solid green!important;
         border-radius: 10px
 
     }
     .maindiv{ 
-        width: 98%; height: 500px;
-        min-Width:550px;
-         border: 2px #ababab solid; 
+        width: 500px; height: 500px;
+        min-Width:500px;
           position: relative }
     .image {
         position: absolute;
         width: 500px;
         bottom: 100px;
         height: auto;
-        left: 10%;
     }
     #some{
-        height: 50px;
-        width: 100px;
+        height: 60px;
+        width: 130px;
         display: flex;
         flex-wrap: wrap;
         padding: 5px;
@@ -213,9 +218,9 @@ background: #fff;}
         flex-wrap: wrap;
         font-size: 14px;
         position: absolute;
-        bottom: 265px;
+        bottom: 262px !important; 
         animation: divanimation 2s;
-        left: 69.3% !important;
+        left: 324px !important;
         border: 1px solid #ababab!important;
         border-radius: 10px
     }
@@ -226,7 +231,7 @@ background: #fff;}
         position: absolute;
         bottom: 157px;
         height: 100px;
-        left: 27%;
+        left: 94px;
         animation: example 2s;
         border: 1px solid gray;
     }
@@ -241,8 +246,8 @@ background: #fff;}
     }
     
     .textme {
-        height: 50px;
-        width: 100px;
+        height: 60px;
+        width: 130px;
         display: flex;
         flex-wrap: wrap;
         padding: 5px;
@@ -250,9 +255,9 @@ background: #fff;}
         flex-wrap: wrap;
         font-size: 14px;
         position: absolute;
-        bottom: 265px;
+        bottom: 261px;
         animation: divanimation 2s;
-        left: 12.5%;
+        left: 3px;
         border: 1px solid #ababab!important;
         border-radius: 10px
 
@@ -300,7 +305,7 @@ background: #fff;}
         position: absolute;
         bottom: 157px;
         height: 100px;
-        left: 83.58%;
+        left: 415px;
         animation: line3 2s;
         border: 1px solid #ababab!important;
     }
@@ -338,25 +343,25 @@ background: #fff;}
     width: 0px;
     position: absolute;
     bottom: 225px;
-    height: 100px;
-    left: 52.67%;
-    animation: line4 2s;
+    height: 50px;
+    left: 548px;
+    animation: line6 2s;
     border: 1px solid green!important;
   }
   .milldlediv{
-    height: 50px;
+    height: 60px;
     padding: 5px;
     /* display: none; */
-    width: 100px;
+    width: 130px;
     background-color: white;
     display: flex;
     flex-wrap: wrap-reverse;
     /* overflow: hidden; */
     font-size: 14px;
     position: absolute;
-    bottom: 330px;
+    bottom: 280px;
     animation: divanimation 2s;
-    left: 46.9%;
+    left: 457px;
     border: 1px solid green!important;
     border-radius: 10px
 
