@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./messageBox.css"
 // import image from "./Capture.PNG"
-
-let lastScrollY = 0;
-let ticking = false;
+;
 
 class Image extends Component {
 
@@ -28,18 +26,20 @@ class Image extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll, true);
+
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll', this.handleScroll);
+    // }
 
     // nav = React.createRef();
     handleScroll = () => {
-
-        let scrool = this.refs.imagei.getBoundingClientRect().top
+   if( this.refs.imagei) {
+         let scrool = this.refs.imagei.getBoundingClientRect().top
         console.log(scrool)
         if (scrool < 200) {
+            console.log("im am runing")
             this.setState({
                 class1: "line1",
                 class2: "textme",
@@ -53,13 +53,12 @@ class Image extends Component {
             class9: "milldlediv",
 
             })
-        }
+        }}
     };
 
     render() {
         return (
             <div style={{display:"flex",justifyContent:"center"}}>
-            
                 <div ref={this.nav} className="maindiv" >
                     <div className="parent" style={{paddingLeft:"20px"}}>
                     <div className={this.state.class1}></div>
