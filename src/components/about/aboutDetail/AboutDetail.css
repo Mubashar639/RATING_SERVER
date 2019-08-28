@@ -1,0 +1,10 @@
+.aboutdt-container{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.abt-c2{
+    display: flex;
+    flex-direction: column;
+   width: 900px;
+}

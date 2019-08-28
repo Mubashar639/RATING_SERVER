@@ -1,0 +1,33 @@
+.besmart-c{
+    background-color: #f4f4f4!important;
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 10px;
+}
+.besmart-container{
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4!important;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+
+}
+.besmart-c{
+    display: flex;
+    height: 270px ;
+    width: 344px;
+    align-items: center;
+    
+}
+.besmart-h5{
+    margin: 20px 0px 0px 0px;
+}
+.besmart-p{
+    text-align: center;
+    vertical-align: baseline;
+    padding:17px;
+    font-size: 100%;
+}
+
+

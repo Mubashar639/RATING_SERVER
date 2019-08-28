@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f22aacbe.chunk.css",
+    "main.js": "/static/js/main.a8b7447f.chunk.js",
+    "main.js.map": "/static/js/main.a8b7447f.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.00c0d917.js",
+    "runtime~main.js.map": "/static/js/runtime~main.00c0d917.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.53e27735.chunk.js": "/static/js/2.53e27735.chunk.js",
+    "static/js/2.53e27735.chunk.js.map": "/static/js/2.53e27735.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f3eadbdcd4ca7dd8fb5f92671426d898.js": "/precache-manifest.f3eadbdcd4ca7dd8fb5f92671426d898.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.f22aacbe.chunk.css.map": "/static/css/main.f22aacbe.chunk.css.map",
+    "static/media/header.css": "/static/media/bg1.aa917761.jpeg",
+    "static/media/logo-labdoor-white.svg": "/static/media/logo-labdoor-white.1af77653.svg",
+    "static/media/labdoorWork.css": "/static/media/pictureWorks9a67.d72053cd.jpg"
+  }
+}
