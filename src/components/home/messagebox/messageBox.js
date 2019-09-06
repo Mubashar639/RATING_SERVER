@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./messageBox.css"
 // import image from "./Capture.PNG"
-
-let lastScrollY = 0;
-let ticking = false;
+;
 
 class Image extends Component {
 
@@ -28,60 +26,61 @@ class Image extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll, true);
+
     }
 
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll', this.handleScroll);
+    // }
 
     // nav = React.createRef();
     handleScroll = () => {
-
-        let scrool = this.refs.imagei.getBoundingClientRect().top
+   if( this.refs.imagei) {
+         let scrool = this.refs.imagei.getBoundingClientRect().top
         console.log(scrool)
         if (scrool < 200) {
+            console.log("im am runing")
             this.setState({
                 class1: "line1",
                 class2: "textme",
                 class3: "line3",
-        
                 class4: "textme2",
                 class5: "line4",
                 //   class6 : "textme", 
                 class7: "line5",
             class8: "milldleline",
             class9: "milldlediv",
+            classid:"some"
 
             })
-        }
+        }}
     };
 
     render() {
         return (
-            <div style={{display:"flex",justifyContent:"center"}}>
-            
+            <div className="msg-box-container" style={{display:"flex",justifyContent:"center",}}>
                 <div ref={this.nav} className="maindiv" >
                     <div className="parent" style={{paddingLeft:"20px"}}>
                     <div className={this.state.class1}></div>
                     <div className={this.state.class2}>
-               duffare ani dya mzak aa ye
+               acnancnancannacnc
                          </div>
                     <div className={this.state.class3}></div>
                     <div className={this.state.class4} >
-                    duffare ani dya mzak aa ye
+                  acnancnacnannc
                 
                    
                         </div>
                     <div className={this.state.class5}></div>
                     <div  className={this.state.class8}></div>
                     <div  className={this.state.class9}>asdf askdjf alsdkfj</div>
-                    <div className={this.state.class2} id="some" style={{ position: "absolute", left: "56.5%" }}>
-                    duffare ani dya mzak aa ye dfsa
+                    <div className={this.state.class2} id={this.state.classid} style={{ position: "absolute", left: "596px" }}>
+                  abcabcbacbabcbababc
 
                     </div>
                     <div className={this.state.class7}></div>
-                    <div className={this.state.class4 } style={{ position: "absolute", left: "69.52%" }}>
-                    duffare ani dya mzak aa ye
+                    <div className={this.state.class4 } style={{ position: "absolute", left: "747px" }}>
+                    acnancnacnncancc
                    
                         </div>
                         </div>

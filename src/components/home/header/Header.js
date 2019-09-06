@@ -12,7 +12,7 @@ import {
 } from 'reactstrap';
 import {Link} from "react-router-dom"
 import "./header.css"
-import Logo from "./images/logo-labdoor-white.svg"
+import Logo from "./images/logo.png"
 
 export default class Header extends Component {
     constructor(props) {
@@ -30,9 +30,10 @@ export default class Header extends Component {
     }
     render() {
         return (
-            <div className="header-container">
+                <div className="header-container">
+            <div className="header-c-dark">
                 <Navbar className="header-c" color="light"  expand="xl">
-                    <Link to="/"><img src={Logo} alt="Labdoor"/></Link>
+                    <Link to="/"><img className="logo" src={Logo} alt="Labdoor"/></Link>
                     <NavbarToggler className="header-toggler" onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto header-link-area" navbar>
@@ -53,8 +54,9 @@ export default class Header extends Component {
                         </Nav>
                     </Collapse>
                 </Navbar>
-                <h1 className="header-h-h1">Shop Smart for CBD Oil</h1>
+                <h1 className="header-h-h1">Looking for a trusted CBD brand?</h1>
                 <div className="header-view-rankings">View Rankings</div>
+            </div>
             </div>
         );
     }

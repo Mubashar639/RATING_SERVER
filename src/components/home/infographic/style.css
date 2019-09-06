@@ -1,0 +1,16 @@
+.infographic-container{
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-img{
+    width: 900px;
+}
+.info-hr1{
+ height: 100px;
+ margin: 20px;
+border-left: 1px solid black;   
+}

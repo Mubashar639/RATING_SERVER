@@ -4,7 +4,7 @@ function ReadyToShop() {
   return (
     <div className="r2s-contsiner">
        <h2 className="r2s-heading">
-       Ready to shop smart?
+       Find the Right CBD Product Now
        </h2>
        <div className="r2s-rankings">
          View Rankings

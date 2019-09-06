@@ -9,7 +9,7 @@ import {
   NavLink
  } from 'reactstrap';
 import {Link} from "react-router-dom";
-import Logo from "./images/logo-labdoor-white.svg"
+import Logo from "./images/logo.png"
 import "./header.css"
 export default class Example extends React.Component {
   constructor(props) {
@@ -29,7 +29,7 @@ export default class Example extends React.Component {
     return (
       <div className="about-h-container">
         <Navbar className="abt-header-c" light expand="xl">
-        <Link to="/"><img src={Logo} alt="Labdoor"/></Link>
+        <Link to="/"><img className="cbd-logo" src={Logo} alt="Labdoor"/></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto about-link-area" navbar>
