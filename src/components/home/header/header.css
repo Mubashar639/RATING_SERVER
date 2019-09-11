@@ -49,12 +49,13 @@
 
 .header-signup-link {
     border-radius: 18px;
-    padding: 7px 15px !IMPORTANT;
+    padding: 7px 15px ;
     color: rgb(109, 132, 64);
     font-size: 14px;
     background-color: rgb(229, 229, 229);
     font-weight: 700;
     margin-top: 5px;
+    border:  1px solid transparent;
 }
 
 .header-signup-link:hover {
@@ -62,6 +63,8 @@
     color: rgb(229, 229, 229);
     background-color: #6d8440;
     transition: 0.5s;
+    border:  1px solid rgb(229, 229, 229);
+
 }
 
 .header-toggler {
@@ -89,12 +92,14 @@
     font-size: 18px;
     font-weight: 500;
     margin-top: 5px;
+    border: 1px solid transparent;
 }
 
 .header-view-rankings:hover {
     background-color: white;
     color: #6d8440;
     transition: 0.5s;
+    border: 1px solid  #6d8440;
 }
 
 .logo {
