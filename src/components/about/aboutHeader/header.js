@@ -36,10 +36,10 @@ export default class Example extends React.Component {
                             <NavItem>
                                 <NavLink  to="/"><Link className="about-h-link" to="/">Home</Link></NavLink>
                             </NavItem>                            <NavItem>
-                                <NavLink  to="/"><Link className="about-h-link" to="/">Rankings</Link></NavLink>
+                                <NavLink  to="/"><Link className="about-h-link" to="/ranking">Rankings</Link></NavLink>
 
                             </NavItem>                            <NavItem>
-                            <NavLink  to="/"><Link className="about-h-link" to="/">Certified Products</Link></NavLink>                              
+                            <NavLink  to="/"><Link className="about-h-link" to="/certified">Certified Products</Link></NavLink>                              
                             </NavItem>                            <NavItem>
                             <NavLink  to="/"><Link className="about-h-link" to="/">Login</Link></NavLink>
                             </NavItem>                            <NavItem>

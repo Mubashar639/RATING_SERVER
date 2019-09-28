@@ -38,42 +38,19 @@
 
 .tb-logo-area2 {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
-@media screen and (max-width: 850px) {
-    .tb-logo-area2 {
-        width: 70%;
-    }
-}
 
-@media screen and (max-width: 650px) {
-    .tb-logo-area2 {
-        width: 90%;
-    }
-    .tb-logo {
-        width: 80px;
-        height: 45px;
-    }
-    .tb-logo2 {
-        width: 45px;
-        height: 45px;
-    }
-    .tb-logo3 {
-        width: 45px;
-        height: 45px;
-    }
-    .tb-logo4 {
-        width: 90px;
-        height: 45px;
-    }
-}
 
-@media screen and (max-width: 400px) {
-    .tb-logo-area2 {
-        width: 80%;
-        flex-wrap: wrap;
+
+
+@media screen and (max-width: 500px) {
+    .logo-logo{
+        width: 300px !important;
+        height: 60px !important;
     }
 
 }
@@ -84,4 +61,8 @@ padding-bottom: 20px;
     font-weight: 700;
     font-size: 30px;
     text-align: center;
+}
+.logo-logo{
+    width: 410px;
+    height: 80px;
 }

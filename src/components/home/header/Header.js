@@ -40,9 +40,9 @@ export default class Header extends Component {
                             <NavItem>
                                 <NavLink  to="/about"><Link className="header-link" to="/about">About</Link></NavLink>
                             </NavItem>                            <NavItem>
-                                <NavLink  to="/"><Link className="header-link" to="/">Rankings</Link></NavLink>
+                                <NavLink  to="/"><Link className="header-link" to="/ranking">Rankings</Link></NavLink>
                             </NavItem>                            <NavItem>
-                                <NavLink  to="/"><Link className="header-link" to="/">Certified Products</Link></NavLink>
+                                <NavLink  to="/"><Link className="header-link" to="/certified">Certified Products</Link></NavLink>
 
                             </NavItem>                            <NavItem>
                                 <NavLink  to="/"><Link className="header-link" to="/">Login</Link></NavLink>
@@ -54,7 +54,7 @@ export default class Header extends Component {
                         </Nav>
                     </Collapse>
                 </Navbar>
-                <h1 className="header-h-h1">Looking for a trusted CBD brand?</h1>
+                <h1 className="header-h-h1">Looking for a trusted<b> CBD </b> brand?</h1>
                 <div className="header-view-rankings">View Rankings</div>
             </div>
             </div>
