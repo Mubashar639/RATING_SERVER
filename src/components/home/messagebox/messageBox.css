@@ -20,6 +20,7 @@
     height: 100px;
     left: 191px;
     animation: example 2s;
+<<<<<<< HEAD
     border: .5px solid rgb(109, 132, 64)!important;
 }
 
@@ -28,6 +29,14 @@
     height: 500px;
     /* min-Width:1300px;  */
     ;
+=======
+    border: .5px solid  rgb(109,132,64)!important;
+}
+.maindiv{ 
+
+    width: 1000px; height: 500px;
+    /* min-Width:1300px;  */;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     display: flex;
     justify-content: center;
     position: relative
@@ -55,7 +64,12 @@
     bottom: 329px;
     animation: divanimation 2s;
     left: 100px;
+<<<<<<< HEAD
     border: 1px solid rgb(109, 132, 64)!important;
+=======
+    border: 1px solid   rgb(109,132,64)!important;
+    
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     border-radius: 10px
 }
 
@@ -83,7 +97,11 @@
     height: 140px;
     left: 374px;
     animation: line3 2s;
+<<<<<<< HEAD
     border: .5px solid rgb(109, 132, 64)!important;
+=======
+    border: .5px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
 }
 
 @keyframes line3 {
@@ -95,7 +113,11 @@
     }
 }
 
+<<<<<<< HEAD
 .textme2 {
+=======
+.textme2{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     height: 60px;
     padding: 5px;
     /* display: none; */
@@ -107,8 +129,13 @@
     position: absolute;
     bottom: 370px;
     animation: divanimation 2s;
+<<<<<<< HEAD
     left: 283px;
     border: 1px solid rgb(109, 132, 64)!important;
+=======
+    left:283px;
+    border: 1px solid  rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     border-radius: 10px
 }
 
@@ -121,7 +148,11 @@
     height: 100px;
     left: 687px;
     animation: line4 2s;
+<<<<<<< HEAD
     border: .5px solid rgb(109, 132, 64)!important;
+=======
+    border: .5px solid  rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
 }
 
 @keyframes line4 {
@@ -142,7 +173,11 @@
     height: 140px;
     left: 838px;
     animation: line3 2s;
+<<<<<<< HEAD
     border: .5px solid rgb(109, 132, 64)!important;
+=======
+    border: .5px solid  rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
 }
 
 @keyframes line3 {
@@ -153,7 +188,10 @@
         height: 140px;
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
 @keyframes line6 {
     0% {
         height: 0
@@ -162,11 +200,16 @@
         height: 50px;
     }
 }
+<<<<<<< HEAD
 
 .commonclass {
+=======
+.commonclass{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     display: none
 }
 
+<<<<<<< HEAD
 .textme2::after,
 .textme::after {
     position: absolute;
@@ -185,6 +228,10 @@
 
 @media only screen and (max-width: 1040px) {
     .milldleline {
+=======
+@media only screen and (max-width: 1040px) {
+    .milldleline{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         z-index: 100;
         height: 0px;
         width: 0px;
@@ -193,9 +240,15 @@
         height: 100px;
         left: 270px !important;
         animation: line4 2s;
+<<<<<<< HEAD
         border: .5px solid rgb(109, 132, 64)!important;
     }
     .milldlediv {
+=======
+        border: .5px solid   rgb(109,132,64)!important;
+      }
+      .milldlediv{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         height: 60px;
         padding: 5px;
         /* display: none; */
@@ -209,22 +262,37 @@
         bottom: 212px !important;
         animation: divanimation 2s;
         left: 179px !important;
+<<<<<<< HEAD
         border: 1px solid rgb(109, 132, 64)!important;
+=======
+        border: 1px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         border-radius: 10px
     }
+<<<<<<< HEAD
     .maindiv {
         width: 500px;
         height: 500px;
         min-Width: 500px;
         position: relative
     }
+=======
+    .maindiv{ 
+        width: 500px; height: 500px;
+        min-Width:500px;
+          position: relative }
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     .image {
         position: absolute;
         width: 500px;
         bottom: 100px;
         height: auto;
     }
+<<<<<<< HEAD
     #some {
+=======
+    #some{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         height: 60px;
         width: 130px;
         display: flex;
@@ -234,10 +302,17 @@
         flex-wrap: wrap;
         font-size: 14px;
         position: absolute;
+<<<<<<< HEAD
         bottom: 262px !important;
         animation: divanimation 2s;
         left: 324px !important;
         border: 1px solid rgb(109, 132, 64)!important;
+=======
+        bottom: 262px !important; 
+        animation: divanimation 2s;
+        left: 324px !important;
+        border: 1px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         border-radius: 10px
     }
     .line1 {
@@ -249,7 +324,11 @@
         height: 100px;
         left: 94px;
         animation: example 2s;
+<<<<<<< HEAD
         border: .5px solid rgb(109, 132, 64);
+=======
+        border: .5px solid   rgb(109,132,64);
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     }
     @keyframes example {
         0% {
@@ -272,7 +351,11 @@
         bottom: 261px;
         animation: divanimation 2s;
         left: 3px;
+<<<<<<< HEAD
         border: 1px solid rgb(109, 132, 64)!important;
+=======
+        border: 1px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         border-radius: 10px
     }
     @keyframes divanimation {
@@ -315,7 +398,11 @@
         height: 100px;
         left: 415px;
         animation: line3 2s;
+<<<<<<< HEAD
         border: .5px solid rgb(109, 132, 64)!important;
+=======
+        border: .5px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     }
     @keyframes line3 {
         0% {
@@ -354,10 +441,16 @@
     height: 50px;
     left: 548px;
     animation: line6 2s;
+<<<<<<< HEAD
     border: .5px solid rgb(109, 132, 64) !important;
 }
 
 .milldlediv {
+=======
+    border: .5px solid   rgb(109,132,64) !important;
+  }
+  .milldlediv{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     height: 60px;
     padding: 5px;
     /* display: none; */
@@ -371,7 +464,11 @@
     bottom: 280px;
     animation: divanimation 2s;
     left: 457px;
+<<<<<<< HEAD
     border: 1px solid rgb(109, 132, 64)!important;
+=======
+    border: 1px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     border-radius: 10px
 }
 
@@ -388,10 +485,21 @@
     border-bottom-color: inherit;
     border-right-color: inherit;
     background: #fff;
+<<<<<<< HEAD
 }
 
 @media only screen and (max-width: 600px) {
     .milldleline {
+=======
+ 
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .milldleline{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         z-index: 100;
         height: 0px;
         width: 0px;
@@ -400,9 +508,15 @@
         height: 60px;
         left: 190px !important;
         animation: line4 2s;
+<<<<<<< HEAD
         border: .5px solid rgb(109, 132, 64)!important;
     }
     .milldlediv {
+=======
+        border: .5px solid   rgb(109,132,64)!important;
+      }
+      .milldlediv{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         height: 60px;
         padding: 5px;
         /* display: none; */
@@ -416,6 +530,7 @@
         bottom: 222px !important;
         animation: divanimation 2s;
         left: 120px !important;
+<<<<<<< HEAD
         border: 1px solid rgb(109, 132, 64)!important;
         border-radius: 10px
     }
@@ -425,13 +540,27 @@
         min-Width: 350px;
         position: relative
     }
+=======
+        border: 1px solid   rgb(109,132,64)!important;
+        border-radius: 10px
+
+    }
+    .maindiv{ 
+        width: 350px; height: 500px;
+        min-Width:350px;
+          position: relative }
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     .image {
         position: absolute;
         width: 350px;
         bottom: 117px;
         height: auto;
     }
+<<<<<<< HEAD
     #some {
+=======
+    #some{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         height: 60px;
         width: 100px;
         display: flex;
@@ -441,10 +570,17 @@
         flex-wrap: wrap;
         font-size: 12px;
         position: absolute;
+<<<<<<< HEAD
         bottom: 262px !important;
         animation: divanimation 2s;
         left: 222px !important;
         border: 1px solid rgb(109, 132, 64)!important;
+=======
+        bottom: 262px !important; 
+        animation: divanimation 2s;
+        left: 222px !important;
+        border: 1px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         border-radius: 10px
     }
     .line1 {
@@ -456,8 +592,14 @@
         height: 100px;
         left: 66px;
         animation: example 2s;
+<<<<<<< HEAD
         border: .5px solid rgb(109, 132, 64);
     }
+=======
+        border: .5px solid   rgb(109,132,64);
+    }
+    
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     @keyframes example {
         0% {
             height: 0
@@ -466,6 +608,10 @@
             height: 100px;
         }
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     .textme {
         height: 60px;
         width: 100px;
@@ -479,9 +625,17 @@
         bottom: 261px;
         animation: divanimation 2s;
         left: -4px;
+<<<<<<< HEAD
         border: 1px solid rgb(109, 132, 64)!important;
         border-radius: 10px
     }
+=======
+        border: 1px solid   rgb(109,132,64)!important;
+        border-radius: 10px
+
+    }
+    
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     @keyframes divanimation {
         0% {
             color: white;
@@ -496,6 +650,7 @@
             color: black
         }
     }
+<<<<<<< HEAD
     .line3 {
         display: none;
     }
@@ -504,6 +659,20 @@
     }
     .line4 {
         display: none
+=======
+
+    .line3{
+       display: none;
+    }
+   
+
+    .textme2{
+       display: none
+    }
+    
+    .line4{
+      display:none
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     }
     @keyframes line4 {
         0% {
@@ -513,7 +682,11 @@
             height: 60px;
         }
     }
+<<<<<<< HEAD
     .line5 {
+=======
+    .line5{
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
         z-index: 100;
         height: 0px;
         width: 0px;
@@ -522,7 +695,11 @@
         height: 100px;
         left: 292px;
         animation: line3 2s;
+<<<<<<< HEAD
         border: .5px solid rgb(109, 132, 64)!important;
+=======
+        border: .5px solid   rgb(109,132,64)!important;
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
     }
     @keyframes line3 {
         0% {
@@ -532,6 +709,7 @@
             height: 100px;
         }
     }
+<<<<<<< HEAD
     .commonclass {
         display: none
     }
@@ -551,3 +729,24 @@
         background: #fff;
     }
 }
+=======
+    .commonclass{
+        display: none
+    }
+.textme2::after, .textme::after{
+    position: absolute;
+    bottom: -5px;
+    left: 69%;
+    display: block;
+    content: '';
+    width: 7px;
+    transform: rotate(47deg);
+    height: 8px;
+    border: solid 1px transparent;
+    border-bottom-color: inherit;
+    border-right-color: inherit;
+    background: #fff;
+}
+    
+  }
+>>>>>>> 570f1757036234235fe74877e70cf3037ff85e03
