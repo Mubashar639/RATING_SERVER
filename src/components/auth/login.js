@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState
+} from "react";
 import {
   MDBContainer,
   MDBRow,
@@ -13,8 +14,23 @@ import {
 } from "mdbreact";
 import "./login.css"
 import Header from "../about/aboutHeader/header"
+import { LoginActionCreater } from "../../Redux/Epics/login"
+import { connect } from "react-redux"
 
-const FormPage = () => {
+
+const FormPage = ({signin}) => {
+
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const submitsign = (e) => {
+    e.preventDefault()
+    if ( email === "" || password === "") { return alert("please fill all the form") }
+  
+    signin({
+      email,
+      password,
+    })
+  }
   return (
       <div>
           <Header />
@@ -28,7 +44,7 @@ const FormPage = () => {
                   <MDBIcon icon="lock" /> Login:
                 </h3>
               </MDBCardHeader>
-              <form>
+              <form onSubmit={submitsign}>
                 <div className="grey-text">
                   <MDBInput
                     label="Type your email"
@@ -38,6 +54,8 @@ const FormPage = () => {
                     validate
                     error="wrong"
                     success="right"
+                    value={email}
+                    onChange={(e) => setemail(e.target.value)}
                   />
                   <MDBInput
                     label="Type your password"
@@ -45,6 +63,8 @@ const FormPage = () => {
                     group
                     type="password"
                     validate
+                    value={password}
+                    onChange={(e) => setpassword(e.target.value)}
                   />
                 </div>
 
@@ -73,4 +93,11 @@ const FormPage = () => {
   );
 };
 
-export default FormPage;
+const mapDispatchToProps = dispatch => ({
+  signin: (data) => dispatch(LoginActionCreater(data))
+})
+
+export default connect(
+  null,
+  mapDispatchToProps)
+  (FormPage);

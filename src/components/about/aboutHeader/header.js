@@ -7,11 +7,16 @@ import {
   Nav,
   NavItem,
   NavLink
- } from 'reactstrap';
-import {Link} from "react-router-dom";
+} from 'reactstrap';
+import { Link } from "react-router-dom";
 import Logo from "./images/logo.png"
 import "./header.css"
-export default class Example extends React.Component {
+import { verifyToken } from "../../../shared"
+import { connect } from "react-redux";
+import { login_success, logout_success } from "../../../Redux/Actions/authentication";
+
+
+class Example extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,30 +30,50 @@ export default class Example extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+  componentDidMount() {
+    const user = verifyToken();
+    if (user) {
+      this.props.dispatch(dispatch => dispatch(login_success(user)));
+    }
+  }
+  logout = () => {
+    localStorage.removeItem("token")
+    this.props.dispatch(dispatch => dispatch(logout_success()));
+  }
   render() {
     return (
       <div className="about-h-container">
         <Navbar className="abt-header-c" light expand="xl">
-        <Link to="/"><img className="cbd-logo" src={Logo} alt="Labdoor"/></Link>
+          <Link to="/"><img className="cbd-logo" src={Logo} alt="Labdoor" /></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-auto about-link-area" navbar>
-                            <NavItem>
-                                <NavLink  to="/"><Link className="about-h-link" to="/">Home</Link></NavLink>
-                            </NavItem>                            <NavItem>
-                                <NavLink  to="/"><Link className="about-h-link" to="/ranking">Rankings</Link></NavLink>
+            <Nav className="ml-auto about-link-area" navbar>
+              <NavItem>
+                <NavLink to="/"><Link className="about-h-link" to="/">Home</Link></NavLink>
+              </NavItem>                            <NavItem>
+                <NavLink to="/"><Link className="about-h-link" to="/ranking">Rankings</Link></NavLink>
 
-                            </NavItem>                            <NavItem>
-                            <NavLink  to="/"><Link className="about-h-link" to="/certified">Certified Products</Link></NavLink>                              
-                            </NavItem>                            <NavItem>
-                            <NavLink  to="/"><Link className="about-h-link" to="/">Login</Link></NavLink>
-                            </NavItem>                            <NavItem>
-                            <NavLink  to="/"><Link className="about-h-link" to="/">Sign Up</Link></NavLink>
-                            </NavItem>
-                        </Nav>
+              </NavItem>                            <NavItem>
+                <NavLink to="/"><Link className="about-h-link" to="/certified">Certified Products</Link></NavLink>
+              </NavItem>
+              {!this.props.user && <NavItem><NavLink to="/"><Link className="about-h-link" to="/login">Login</Link></NavLink>
+              </NavItem>} {!this.props.user &&
+                <NavItem>
+                  <NavLink to="/"><Link className="about-h-link" to="/signup">Sign Up</Link></NavLink>
+                </NavItem>}
+              {this.props.user && <NavItem>
+                <NavLink to="/"><Link onClick={() => this.logout()} className="about-h-link">Log Out</Link></NavLink>
+              </NavItem>}
+            </Nav>
           </Collapse>
         </Navbar>
       </div>
     );
   }
 }
+
+const mapStateToProps = ({ Login: { user } }) => ({
+  user
+})
+
+export default connect(mapStateToProps)(Example)
