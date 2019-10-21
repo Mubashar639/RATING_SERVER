@@ -9,7 +9,7 @@ import Login from './components/auth/login';
 
 import SignUp from './components/auth/signUp';
 import { connect } from "react-redux"
-
+import ViewProduct from "./components/ranking/viewProduct/viewProduct"
 // Login
 function App({ user }) {
   return (
@@ -19,6 +19,7 @@ function App({ user }) {
           <Route path="/about" component={About} />
           <Route path="/ranking" component={Rankings} />
           <Route path="/certified" component={CertifiedProducts} />
+          <Route path="/productranking" component = {ViewProduct} />
           <Route path="/login" 
            render={()=> {
             return (

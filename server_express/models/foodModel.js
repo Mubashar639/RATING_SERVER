@@ -10,6 +10,30 @@ const productSchema = new Schema({
     type: Number,
     required: true
   },
+  THC: {
+    type: Number,
+    required: true
+  },
+  THC1: {
+    type: Number,
+    required: true
+  },
+  CBD: {
+    type: Number,
+    required: true
+  },
+  CBD1: {
+    type: Number,
+    required: true
+  },
+  heavyMetals: {
+    type: Number,
+    required: true
+  },
+  heavyMetals1: {
+    type: Number,
+    required: true
+  },
   avgRating: {
     type: Number,
      set: val => Math.round(val * 10 )/10

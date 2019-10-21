@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { Link } from "react-router-dom";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -28,21 +29,21 @@ const StyledTableRow = withStyles(theme => ({
   },
 }))(TableRow);
 
-function createData(key, name, calories, fat, Rating ) {
-  return {key, name, calories, fat, Rating };
+function createData(key, name, calories, fat, Rating) {
+  return { key, name, calories, fat, Rating };
 }
 
 const rows = [
-  createData(1, "Garden Of Life Dr. Formulated CBD + Sleep", 6.0,21 , 100 ),
-  createData(2, "Garden Of Life Dr. Formulated CBD + Sleep", 9.0,21 , 100),
-  createData(3, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0, 21,  100),
-  createData(4, "Garden Of Life Dr. Formulated CBD + Sleep", 3.7,21 , 100),
-  createData(5, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0,21 , 100),
-  createData(6, "Garden Of Life Dr. Formulated CBD + Sleep", 6.0,21 , 100 ),
-  createData(7, "Garden Of Life Dr. Formulated CBD + Sleep", 9.0,21 , 100),
-  createData(8, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0, 21,  100),
-  createData(9, "Garden Of Life Dr. Formulated CBD + Sleep", 3.7,21 , 100),
-  createData(10, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0,21 , 100),
+  createData(1, "Garden Of Life Dr. Formulated CBD + Sleep", 6.0, 21, 100),
+  createData(2, "Garden Of Life Dr. Formulated CBD + Sleep", 9.0, 21, 100),
+  createData(3, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0, 21, 100),
+  createData(4, "Garden Of Life Dr. Formulated CBD + Sleep", 3.7, 21, 100),
+  createData(5, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0, 21, 100),
+  createData(6, "Garden Of Life Dr. Formulated CBD + Sleep", 6.0, 21, 100),
+  createData(7, "Garden Of Life Dr. Formulated CBD + Sleep", 9.0, 21, 100),
+  createData(8, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0, 21, 100),
+  createData(9, "Garden Of Life Dr. Formulated CBD + Sleep", 3.7, 21, 100),
+  createData(10, "Garden Of Life Dr. Formulated CBD + Sleep", 16.0, 21, 100),
 
 ];
 
@@ -58,10 +59,13 @@ const rows = [
 // }));
 
 export default function Products() {
-//   const classes = useStyles();
+  //   const classes = useStyles();
 
   return (
-    <Paper  className="products">
+    <div>
+
+
+    <Paper className="products">
       <Table className="products-table">
         <TableHead>
           <TableRow>
@@ -74,16 +78,20 @@ export default function Products() {
         <TableBody>
           {rows.map(row => (
             <StyledTableRow key={row.key} className="p-table-row" >
+
               <StyledTableCell component="th" scope="row">
-              <img width="40" src={oil} alt=""/> {row.name}
+                <Link className="pv-link" to="/productranking">
+                  <img width="40" src={oil} alt="" /> {row.name}
+                </Link>
               </StyledTableCell>
               <StyledTableCell align="center"> {row.calories}</StyledTableCell>
-              <StyledTableCell align="center"><Circle progress={35}  size="70"  /></StyledTableCell>
+              <StyledTableCell align="center"><Circle progress={35} size="70" /></StyledTableCell>
               <StyledTableCell align="center">{row.fat}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
       </Table>
     </Paper>
+    </div>
   );
 }
