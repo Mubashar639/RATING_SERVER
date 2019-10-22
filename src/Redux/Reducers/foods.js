@@ -9,9 +9,9 @@ const Foods = (
   action
 ) => {
   switch (action.type) {
-  
+
     case actionTypes.FOOD_SUCCESS:
-        debugger;
+
       return { ...state, isLoading: false, errMess: null, foods: action.food };
     case actionTypes.FOOD_ADD:
       {
@@ -22,28 +22,28 @@ const Foods = (
         }
       }
     case actionTypes.FOOD_REMOVE:
-      debugger;
+
       {
-        const foods = state.foods.filter((food,index)=>food._id !== action.food)
+        const foods = state.foods.filter((food, index) => food._id !== action.food)
         return {
           ...state, isLoading: false, errMess: null,
           foods
         }
       }
 
-      case actionTypes.FOOD_UPDATE:
-          debugger;
-          {
-            const foods = state.foods.map((food,index)=>{
-             if(food._id === action.food.id) return action.food.updatedfood
-            else
-             return food
-            })
-            return {
-              ...state, isLoading: false, errMess: null,
-              foods
-            }
-          }
+    case actionTypes.FOOD_UPDATE:
+
+      {
+        const foods = state.foods.map((food, index) => {
+          if (food._id === action.food.id) return action.food.updatedfood
+          else
+            return food
+        })
+        return {
+          ...state, isLoading: false, errMess: null,
+          foods
+        }
+      }
     default:
       return state;
   }

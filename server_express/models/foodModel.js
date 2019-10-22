@@ -36,28 +36,31 @@ const productSchema = new Schema({
   },
   avgRating: {
     type: Number,
-     set: val => Math.round(val * 10 )/10
+    set: val => Math.round(val * 10) / 10,
+    default: 0
+
   },
   numberRating: {
     type: Number,
-  
+    default: 0
+
   },
   image: {
     type: String,
-    
+
   }
 },
-{
-  toJSON: { virtuals: true },
-  toObject: { virtuals: true }
-});
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+  });
 
-productSchema.virtual("reviews",{
-  ref:"Review",
-  foreignField:"product",
-  localField:"_id"
+productSchema.virtual("reviews", {
+  ref: "Review",
+  foreignField: "product",
+  localField: "_id"
 })
 
-const Products = mongoose.model("Products", productSchema);
+const Products = mongoose.model("MadicalProducts", productSchema);
 
 module.exports = Products;

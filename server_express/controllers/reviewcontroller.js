@@ -6,15 +6,16 @@ const config = require("../config")
 
 
 
-exports.getreview= errCatch(async (req, res) => {
+exports.getreview = errCatch(async (req, res) => {
     const review = await reveiwModel.find()
     res.status(200).json(review)
 })
 
-exports.creatReview= errCatch(async (req, res) => {
-    // console.log(req.params.product)
-    if(!req.body.user) req.body.user=req.user
-    if(!req.body.product) req.body.product=req.params.product 
+exports.creatReview = errCatch(async (req, res) => {
+    console.log(req.params.product)
+    console.log(req.user)
+    if (!req.body.user) req.body.user = req.user
+    if (!req.body.product) req.body.product = req.params.product
     const review = await reveiwModel.create(req.body)
     res.status(200).json(review)
 })

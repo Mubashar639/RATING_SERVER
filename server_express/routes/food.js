@@ -3,7 +3,7 @@ const multer = require("multer");
 const Products = require("../models/foodModel");
 const errAsync = require("../utils/asynError")
 // const review = require("../controllers/reviewcontroller");
-const reviewRouter= require("./review")
+const reviewRouter = require("./review")
 
 
 var storage = multer.diskStorage({
@@ -17,7 +17,7 @@ var storage = multer.diskStorage({
 });
 
 var upload = multer({ storage: storage });
-Router.use("/:product/review",reviewRouter)
+Router.use("/:product/review", reviewRouter)
 Router.route("/")
   .get((req, res, next) => {
     Products.find({}, (err, products) => {
@@ -33,13 +33,10 @@ Router.route("/")
   })
   .post(upload.single("photo"), (req, res, next) => {
     const { name, price } = req.body;
-    console.log(req.file)
-    console.log(req.body)
+    req.body.image = req.file.filename
     Products.create(
       {
-        name,
-        price,
-        image: req.file.filename
+        ...req.body
       },
       (err, product) => {
         if (err) return next(err);

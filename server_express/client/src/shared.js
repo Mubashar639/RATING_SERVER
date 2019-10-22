@@ -8,20 +8,20 @@ export const AppsList = [
     img: "/images/A.png",
     appFeatures: {
       paymentOptions: ["easypaisa", "konnect"],
-      isDistributionEnabled: true,
-      branches: [
+      isDistributionEnabled:true,
+      branches:[
         {
-          id: 1,
-          name: 'Branch A',
-          type: 'branch',
-          stuff: {},
-          incharge: 'Account A'
+          id:1,
+          name:'Branch A',
+          type:'branch',
+          stuff:{},
+          incharge:'Account A'
         }
       ]
     },
 
     theme: {
-      ads: [{ url: "some", position: "top", source: null }]
+      ads: [{ url: "some", position: "top", source: null}]
     }
   },
   {
@@ -263,20 +263,20 @@ class Accounts {
 
 export const account = new Accounts();
 export const appAccountModel = new AppAccountModel();
-export const UrlApi = "http://localhost:5000/api"
-export const Url = "http://localhost:5000/"
-// export const Url = 'https://mubasharserver734.herokuapp.com/';
-export const baseUrl = axios.create({ baseURL: UrlApi });
+// export const baseUrl = "http://localhost:4000/api"
+
+const Url = 'http://localhost:5000/';
+export const baseUrl = axios.create({ baseURL: Url });
 
 // eslint-disable-next-line
 
 
 export const verifyToken = () => {
-  const token = localStorage.getItem("token");
-  if (!token) return null;
-  const decodedToken = jwt.decode(token);
-  if (decodedToken.exp > Date.now() / 1000) return decodedToken
-  return null
+    const token = localStorage.getItem("token");
+    if (!token) return null;
+    const decodedToken = jwt.decode(token);
+    if (decodedToken.exp > Date.now() / 1000) return decodedToken
+    return null
 }
 
 

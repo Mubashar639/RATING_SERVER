@@ -19,20 +19,22 @@ function App({ user }) {
           <Route path="/about" component={About} />
           <Route path="/ranking" component={Rankings} />
           <Route path="/certified" component={CertifiedProducts} />
-          <Route path="/productranking" component = {ViewProduct} />
-          <Route path="/login" 
-           render={()=> {
+          <Route path="/productranking/:id" component={ViewProduct} />
+          <Route path="/login"
+            render={() => {
+              return (
+                user ? <Redirect to="/" /> :
+                  <Login />
+              );
+            }
+            } />
+          <Route path="/signup" render={() => {
             return (
               user ? <Redirect to="/" /> :
-              <Login />  
-            );}
-            }/>
-          <Route path="/signup" render={()=> {
-            return (
-              user ? <Redirect to="/" /> :
-              <SignUp />  
-            );}
-            }/>
+                <SignUp />
+            );
+          }
+          } />
           <Route exact path="/" component={Home} />
 
 

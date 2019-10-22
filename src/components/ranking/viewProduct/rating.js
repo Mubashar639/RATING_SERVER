@@ -1,8 +1,18 @@
 import React from 'react';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
-export default function MyRating() {
+import { CreateReview } from "../../../Redux/Epics/review"
+import { connect } from "react-redux"
+
+
+const MyRating = (props) => {
   const [value, setValue] = React.useState(2);
+
+  const postRating = (rating) => {
+    setValue(rating)
+    let object = { rating, pid: props.pid, }
+    props.Review(object)
+  }
 
   return (
     <div>
@@ -11,7 +21,7 @@ export default function MyRating() {
           name="simple-controlled"
           value={value}
           onChange={(event, newValue) => {
-            setValue(newValue);
+            postRating(newValue);
           }}
           size="large"
         />
@@ -20,3 +30,12 @@ export default function MyRating() {
     </div>
   );
 }
+const mapStateToProps = (state, ownProps) => ({
+  user: state.Login.user
+})
+
+const mapDispatchToProps = dispacth => ({
+  Review: (prameter) => dispacth(CreateReview(prameter))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyRating)
