@@ -8,6 +8,8 @@ import Rating from './rating';
 import Header from "../../about/aboutHeader/header"
 import { connect } from "react-redux"
 import { Url } from "../../../shared"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner'
 
 class ViewProduct extends Component {
 
@@ -15,6 +17,7 @@ class ViewProduct extends Component {
         const id = this.props.match.params.id
         const products = this.props.rows.filter(row => row._id === id)
         const product = products[0]
+
         const nmb = 21;
         let clr = "black";
         if (nmb > 20) { clr = "green" };
@@ -25,19 +28,19 @@ class ViewProduct extends Component {
                     <Header />
                     <div className="vp-container">
                         <div>
-                            <p>{product.name}</p>
+                            <p className="vp-heading">{product.name}</p>
                         </div>
                         <div className="vp-c2">
                             <div className="vp-img-area">
                                 <img className="vp-img" src={Url + "uploads/" + product.image} alt="" />
-                                <button>Buy it Now</button>
+                                <button className="vp-but-btn">Buy it Now</button>
                             </div>
                             <div className="vp-img-area">
-                                <p>Ranking</p>
+                                <p className="vp-ranking-p">Ranking</p>
                                 <Circle className="circle-bar" progress={product.avgRating} size="200" />
                             </div>
                             <div className="vp-rating-area">
-                                <p>Rate this Products</p>
+                                <p className="vp-ranking-p"> Rate this Products</p>
 
                                 <Rating pid={product._id} />
                             </div>
@@ -46,18 +49,18 @@ class ViewProduct extends Component {
                         <div>
                             <div className="cbd-prgrs-area">
                                 <p>CBD/Bottle</p>
-                                <span className="bar-txt"><Line className="progress-bar1" percent={`${product.CBD}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /> 20</span>
-                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.CBD1}`} strokeWidth="4" />20</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.CBD}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /><span>Found</span> {product.CBD }</span>
+                                <span className="bar-txt">  <Line className="progress-bar1" percent={`${product.CBD1}`} strokeWidth="4" /><span>Claimed</span>  {product.CBD1 }</span>
                             </div>
                             <div className="cbd-prgrs-area">
                                 <p>THC</p>
-                                <span className="bar-txt"><Line className="progress-bar1" percent={`${product.THC}`} trailColor={clr} strokeWidth="4" strokeColor={clr} />20</span>
-                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC1}`} strokeWidth="4" />20</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /><span>Found</span> {product.THC }</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC1}`} strokeWidth="4" /><span>FDA Limit</span> {product.THC1 }</span>
                             </div>
                             <div className="cbd-prgrs-area">
                                 <p>heavy metals</p>
-                                <span className="bar-txt"><Line className="progress-bar1" percent={`${product.heavyMetals}`} trailColor={clr} strokeWidth="4" strokeColor={clr} />20</span>
-                                <span className="bar-txt"><Line className="progress-bar1" percent={`${product.heavyMetals1}`} strokeWidth="4" s />20</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.heavyMetals}`} trailColor={clr} strokeWidth="4" strokeColor={clr} />{product.heavyMetals }</span>
+                                <span className="bar-txt"><Line className="progress-bar1" percent={`${product.heavyMetals1}`} strokeWidth="4" s />{product.heavyMetals1 }</span>
                             </div>
 
                         </div>
@@ -65,7 +68,7 @@ class ViewProduct extends Component {
                 </div>
             )
         } else {
-            return null
+            return  <div className="loader-my"><Loader type="TailSpin" color="#00BFFF" height={100} width={100}  /> </div>
         }
     }
 }

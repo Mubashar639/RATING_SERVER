@@ -25,3 +25,7 @@
     height: 100%;
     text-decoration: none;
 }
+.loader-my{
+ display: flex;
+ justify-content: flex-end;
+}

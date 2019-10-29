@@ -26,6 +26,7 @@ const MyRating = (props) => {
           size="large"
         />
       </Box>
+      <button className="vp-add-rating">Add Rating</button>
 
     </div>
   );

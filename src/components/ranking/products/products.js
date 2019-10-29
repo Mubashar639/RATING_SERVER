@@ -10,6 +10,8 @@ import Paper from '@material-ui/core/Paper';
 import oil from "./oil.png";
 import "./products.css";
 import Circle from 'react-circle';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner'
 import { connect } from "react-redux"
 import { Getfood } from "../../../Redux/Epics/food"
 import { Url } from "../../../shared"
@@ -97,7 +99,7 @@ class ProductTable extends React.Component {
                   <StyledTableCell align="center"><Circle progress={row.avgRating} size="70" /></StyledTableCell>
                   <StyledTableCell align="center">{row.price}</StyledTableCell>
                 </StyledTableRow>
-              )) : null}
+              )) : <div className="loader-my"><Loader type="TailSpin" color="#00BFFF" height={100} width={100}  /> </div>}
             </TableBody>
           </Table>
         </Paper>
