@@ -96,7 +96,7 @@ class ProductTable extends React.Component {
 
                   </StyledTableCell>
                   <StyledTableCell align="center"> {row.numberRating}</StyledTableCell>
-                  <StyledTableCell align="center"><Circle progress={row.avgRating} size="70" /></StyledTableCell>
+                  <StyledTableCell align="center"><Circle progress={row.avgRating * 20} size="70" /></StyledTableCell>
                   <StyledTableCell align="center">{row.price}</StyledTableCell>
                 </StyledTableRow>
               )) : <div className="loader-my"><Loader type="TailSpin" color="#00BFFF" height={100} width={100}  /> </div>}

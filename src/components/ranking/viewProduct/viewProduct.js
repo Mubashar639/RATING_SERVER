@@ -10,6 +10,8 @@ import { connect } from "react-redux"
 import { Url } from "../../../shared"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
+import Question from "../../comment/commentindex"
+
 
 class ViewProduct extends Component {
 
@@ -37,12 +39,13 @@ class ViewProduct extends Component {
                             </div>
                             <div className="vp-img-area">
                                 <p className="vp-ranking-p">Ranking</p>
-                                <Circle className="circle-bar" progress={product.avgRating} size="200" />
+                                <Circle className="circle-bar" progress={product.avgRating*20} size="200" />
                             </div>
                             <div className="vp-rating-area">
                                 <p className="vp-ranking-p"> Rate this Products</p>
 
                                 <Rating pid={product._id} />
+                              
                             </div>
                         </div>
 
@@ -65,7 +68,10 @@ class ViewProduct extends Component {
 
                         </div>
                     </div>
+                    <Question comment={product.comment} />
+
                 </div>
+
             )
         } else {
             return  <div className="loader-my"><Loader type="TailSpin" color="#00BFFF" height={100} width={100}  /> </div>

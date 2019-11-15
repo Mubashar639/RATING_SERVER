@@ -19,6 +19,8 @@ export const FOOD_FAILED = "FOOD_FAILED"
 export const REVIEW_ADD = "REVIEW_ADD"
 export const REVIEW_FAILED = "REVIEW_FAILED"
 
+export const comment_ADD = "COMMENT_ADD"
+export const COMMENT_FAILED = "COMMENT_FAILED"
 
 
 

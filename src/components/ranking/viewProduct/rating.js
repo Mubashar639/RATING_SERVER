@@ -1,19 +1,28 @@
-import React from 'react';
-import Rating from '@material-ui/lab/Rating';
-import Box from '@material-ui/core/Box';
-import { CreateReview } from "../../../Redux/Epics/review"
-import { connect } from "react-redux"
+import React from "react";
+import Rating from "@material-ui/lab/Rating";
+import Box from "@material-ui/core/Box";
+import { CreateReview,CreateComment } from "../../../Redux/Epics/review";
+import { connect } from "react-redux";
 
 
-const MyRating = (props) => {
+const MyRating = props => {
   const [value, setValue] = React.useState(2);
+  const [comment, setcomment] = React.useState("");
 
-  const postRating = (rating) => {
-    setValue(rating)
-    let object = { rating, pid: props.pid, }
-    props.Review(object)
-  }
+  const changeRating = rating => {
+    setValue(rating);
+  };
+  const postRating = () => {
+    let object = { value, pid: props.pid };
+    debugger;
+    props.Review(object);
+  };
 
+  const postComment=()=>{
+    let object = { value:comment, pid: props.pid ,user:props.user.name};
+    props.comment(object)
+  };
+console.log( props.user)
   return (
     <div>
       <Box component="fieldset" mb={3} borderColor="transparent">
@@ -21,22 +30,29 @@ const MyRating = (props) => {
           name="simple-controlled"
           value={value}
           onChange={(event, newValue) => {
-            postRating(newValue);
+            changeRating(newValue);
           }}
           size="large"
         />
       </Box>
-      <button className="vp-add-rating">Add Rating</button>
-
+      <button onClick={postRating} className="vp-add-rating">
+        Add Rating
+      </button>
+      <Box component="fieldset" mb={3} borderColor="transparent">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" onChange={(e)=>setcomment(e.target.value)} rows="4" id="comment"></textarea>
+      </Box>
+      <button onClick={postComment} className="vp-add-rating">Add comment</button>
     </div>
   );
-}
+};
 const mapStateToProps = (state, ownProps) => ({
   user: state.Login.user
-})
+});
 
 const mapDispatchToProps = dispacth => ({
-  Review: (prameter) => dispacth(CreateReview(prameter))
-})
+  Review: prameter => dispacth(CreateReview(prameter)),
+  comment: prameter => dispacth(CreateComment(prameter)),
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyRating)
+export default connect(mapStateToProps, mapDispatchToProps)(MyRating);

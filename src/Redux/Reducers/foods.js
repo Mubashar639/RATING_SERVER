@@ -30,6 +30,21 @@ const Foods = (
           foods
         }
       }
+    
+      case actionTypes.comment_ADD:
+      {
+        const foods = state.foods.map((food, index) => {
+          if(food._id === action.comment.food){
+            food.comment.push(action.comment)
+            return food
+          }
+          else return food
+        })
+        return {
+          ...state, isLoading: false, errMess: null,
+          foods
+        }
+      }
 
     case actionTypes.FOOD_UPDATE:
 
