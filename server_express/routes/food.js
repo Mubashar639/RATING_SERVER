@@ -4,6 +4,8 @@ const Products = require("../models/foodModel");
 const errAsync = require("../utils/asynError")
 // const review = require("../controllers/reviewcontroller");
 const reviewRouter = require("./review")
+const commentRouter = require("./commentRouter")
+
 
 
 var storage = multer.diskStorage({
@@ -18,6 +20,8 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 Router.use("/:product/review", reviewRouter)
+Router.use("/:product/comment", commentRouter)
+
 Router.route("/")
   .get((req, res, next) => {
     Products.find({}, (err, products) => {

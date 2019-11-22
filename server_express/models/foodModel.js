@@ -40,6 +40,10 @@ const productSchema = new Schema({
     default: 0
 
   },
+  comment: {
+    type: Array,
+  
+  },
   numberRating: {
     type: Number,
     default: 0
@@ -60,6 +64,7 @@ productSchema.virtual("reviews", {
   foreignField: "product",
   localField: "_id"
 })
+
 
 const Products = mongoose.model("MadicalProducts", productSchema);
 

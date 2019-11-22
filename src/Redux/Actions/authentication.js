@@ -59,3 +59,10 @@ export const reviewfailed = (food) => ({
     type: actionTypes.REVIEW_FAILED,
 })
 
+export const commentAdded = (comment) => ({
+    type: actionTypes.comment_ADD,
+    comment
+})
+export const commentfailed = (food) => ({
+    type: actionTypes.COMMENT_FAILED,
+})

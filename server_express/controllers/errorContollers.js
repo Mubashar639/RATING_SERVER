@@ -1,6 +1,6 @@
 const ErrorClass = require("../utils/errClass")
 
-handleDuplicateKeyError=err=> new ErrorClass(" your email is already exits", 400)
+handleDuplicateKeyError=err=> new ErrorClass(" dulicated issue", 400)
 handleTokenExpiredError=errr=> new ErrorClass (" yoru token is expire login again", 401)
 handleJsonWebTokenError=(error)=>new ErrorClass(" Your token signature in not valid please login again",401)
 contorolCastError=(err)=>{
@@ -34,7 +34,9 @@ const ErrorHandler = (err, req, res, next) => {
         if(error.name==="CastError") error=contorolCastError(error,next)
         if(error.name==="JsonWebTokenError") error=handleJsonWebTokenError(error)
         if(error.name==="TokenExpiredError") error=handleTokenExpiredError(error)  
-        if(error.code==11000) error=handleDuplicateKeyError(error)        
+
+        if(error.code===11000) error=handleDuplicateKeyError(error)   
+
         errorForProduction(res, error)
     
 }

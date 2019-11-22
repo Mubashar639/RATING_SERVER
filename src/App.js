@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './components/home/home';
 import About from "./components/about/about";
-import Footer from "./components/footer/footer.js"
+// import Footer from "./components/footer/footer.js"
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
 import Rankings from './components/ranking/rankings';
 import CertifiedProducts from './components/certifiedProducts/certifiedProducts';
@@ -39,7 +39,7 @@ function App({ user }) {
 
 
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
