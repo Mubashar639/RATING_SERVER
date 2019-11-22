@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Line } from 'rc-progress';
 import Circle from 'react-circle';
-
+import Comment from "../comments/comment"
 import "./viewProduct.css"
 import img from "./cbd.png"
 import Rating from './rating';
@@ -48,22 +48,31 @@ class ViewProduct extends Component {
 
                         <div>
                             <div className="cbd-prgrs-area">
-                                <p>CBD/Bottle</p>
-                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.CBD}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /><span>Found</span> {product.CBD }</span>
-                                <span className="bar-txt">  <Line className="progress-bar1" percent={`${product.CBD1}`} strokeWidth="4" /><span>Claimed</span>  {product.CBD1 }</span>
+                                <p className="vp-cbd-title">CBD/Bottle</p>
+                                <span className="vp-bcd-found">Found</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.CBD}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /> {product.CBD }</span>
+                                <span className="vp-bcd-found">Claimed</span> 
+                                <span className="bar-txt">  <Line className="progress-bar1" percent={`${product.CBD1}`} strokeWidth="4" /> {product.CBD1 }</span>
                             </div>
                             <div className="cbd-prgrs-area">
-                                <p>THC</p>
-                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /><span>Found</span> {product.THC }</span>
-                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC1}`} strokeWidth="4" /><span>FDA Limit</span> {product.THC1 }</span>
+                                <p className="vp-cbd-title">THC</p>
+                                <span className="vp-bcd-found">Found</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC}`} trailColor={clr} strokeWidth="4" strokeColor={clr} /> {product.THC }</span>
+                                <span className="vp-bcd-found">FDA Limit</span>
+                                <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.THC1}`} strokeWidth="4" /> {product.THC1 }</span>
                             </div>
                             <div className="cbd-prgrs-area">
-                                <p>heavy metals</p>
+                                <p className="vp-cbd-title">heavy metals</p>
+                                <span className="vp-bcd-found">Found</span>
                                 <span className="bar-txt"> <Line className="progress-bar1" percent={`${product.heavyMetals}`} trailColor={clr} strokeWidth="4" strokeColor={clr} />{product.heavyMetals }</span>
+                                <span className="vp-bcd-found">Claimed</span>
                                 <span className="bar-txt"><Line className="progress-bar1" percent={`${product.heavyMetals1}`} strokeWidth="4" s />{product.heavyMetals1 }</span>
                             </div>
 
                         </div>
+                    </div>
+                    <div className="comment">
+                      <Comment />
                     </div>
                 </div>
             )

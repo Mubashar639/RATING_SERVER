@@ -64,11 +64,22 @@
     width: 200px;
     height: 250px;
 }
+.vp-bcd-found{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(114, 114, 114);
+    margin: 10px 0px -10px 0px; 
+}
 .progress-bar1{
     width: 555px;
     height: 10px;
     background-color: none;
     margin-top: 10px;
+}
+.vp-cbd-title{
+    font-weight: 700;
+    margin-bottom: 0px;
+    font-size: 20px;
 }
 .cbd-prgrs-area{
     display: flex;
@@ -83,4 +94,15 @@
 .bar-txt{
 display: flex;
 align-items: center;
+font-size: 12px;
+}
+
+@media screen and (max-width: 850px) {
+
+.progress-bar1{
+    width: 305px;
+    height: 10px;
+    background-color: none;
+    margin-top: 10px;
+}
 }
